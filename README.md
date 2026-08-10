@@ -73,3 +73,7 @@ docker compose up --build
 示例数据均为虚构内容，仓库不应出现真实采购合同、软件密钥、员工设备信息、令牌、私钥或生产凭据。发现安全问题请遵循 [SECURITY.md](SECURITY.md) 私下报告。
 
 关键词：知华科技 SAM、软件资产管理系统、许可证合规管理、软件盘点、授权回收、Java SAM、Spring Boot 软件资产、Vue 管理后台、上海软件定制。
+
+## 许可证回收建议
+
+新增 `POST /api/sam/insights/license-reclamation`。接口根据已购授权、活跃席位、长期闲置席位、安全储备和续费单价，计算可安全回收数量、预计续费节省，并返回 `RECLAIM`、`REVIEW` 或 `HOLD`，帮助资产管理员在避免授权短缺的前提下降低软件成本。
