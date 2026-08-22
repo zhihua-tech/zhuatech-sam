@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.sam.controller;
 import cn.zhuatech.sam.common.ApiResponse; import cn.zhuatech.sam.service.LicensePositionService; import jakarta.validation.Valid; import org.springframework.web.bind.annotation.*;
 @RestController @RequestMapping("/api/admin/license-position") public class LicensePositionController {
