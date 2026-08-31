@@ -77,3 +77,7 @@ docker compose up --build
 ## 许可证回收建议
 
 新增 `POST /api/sam/insights/license-reclamation`。接口根据已购授权、活跃席位、长期闲置席位、安全储备和续费单价，计算可安全回收数量、预计续费节省，并返回 `RECLAIM`、`REVIEW` 或 `HOLD`，帮助资产管理员在避免授权短缺的前提下降低软件成本。
+
+## 企业级软件许可证合规签证
+
+新增 `POST /api/enterprise/sam/license-compliance-attestation`，统一检查产品标准化、权益证明、安装消耗、禁止版本、审计责任和合同条款，返回 `ATTEST / REMEDIATE / BLOCKED`。详见 [合规签证说明](docs/ENTERPRISE_LICENSE_ATTESTATION.md)。
