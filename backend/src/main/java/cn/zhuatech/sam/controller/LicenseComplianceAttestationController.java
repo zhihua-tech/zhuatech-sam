@@ -6,11 +6,20 @@ import cn.zhuatech.sam.service.LicenseComplianceAttestationService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/enterprise/sam")
 public class LicenseComplianceAttestationController {
     private final LicenseComplianceAttestationService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public LicenseComplianceAttestationController(LicenseComplianceAttestationService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/license-compliance-attestation")
     public ApiResponse<LicenseComplianceAttestationService.Assessment> assess(
         @Valid @RequestBody LicenseComplianceAttestationService.Request request) {

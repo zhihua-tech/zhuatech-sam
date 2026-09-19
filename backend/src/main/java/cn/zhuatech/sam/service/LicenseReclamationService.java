@@ -11,8 +11,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class LicenseReclamationService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         int excess = Math.max(0, request.assignedLicenses() - request.activeUsers90Days() - request.minimumReserve());
         int reclaimable = Math.min(excess, request.dormantUsers());
@@ -30,12 +36,21 @@ public class LicenseReclamationService {
             annualSavings, decision, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private double round(double value) { return Math.round(value * 10_000D) / 10_000D; }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String softwareCode, @Min(0) int assignedLicenses,
                           @Min(0) int activeUsers90Days, @Min(0) int dormantUsers,
                           @Min(0) int minimumReserve, @DecimalMin("0") BigDecimal annualUnitCost,
                           @Min(0) int renewalDays, boolean businessCritical) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String softwareCode, int reclaimableLicenses, double reclaimRate,
                          BigDecimal potentialAnnualSavings, String decision, List<String> actions) {}
 }
